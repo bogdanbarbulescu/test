@@ -1,20 +1,14 @@
 import React from "react";
-import Navigation from "./components/Navbar";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import "./styles.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AboutMe from "./pages/AboutMe";
 
 function App() {
   return (
-    <div>
-      <Navigation />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/about" element={<AboutMe />} />
+      </Routes>
+    </Router>
   );
 }
 
